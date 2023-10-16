@@ -1,0 +1,41 @@
+main {
+    width: 100%;
+    height: 0px;
+    color: #fff;
+}
+
+.contents {
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+    display: block; /* Ensure the element is displayed */
+    opacity: 1; /* Ensure the element is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+    visibility: visible; /* Ensure element is visible */
+    width: 100%; /* Adjust width as needed */
+    height: 90%; /* Allow the element to expand vertically */
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.contents main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+
+}
+
+.contents main div {
+    flex: 1;
+    margin: 20px;
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: calc(25% - 60px); /* 각 행당 4개 아이템, 여백 고려하여 너비 설정 */
+    max-width: 210px; /* 최대 너비 설정 */
+    flex-basis: calc(25% - 60px); /* 초기 크기 설정, 여백 고려하여 */
+    height: 200px; /* 높이 설정 */
+}
+
+
+.contents main div button{
+    margin-left: 120px;
+}

@@ -1,0 +1,22 @@
+#content {
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+    display: block; /* Ensure the element is displayed */
+    opacity: 1; /* Ensure the element is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+    visibility: visible; /* Ensure element is visible */
+    background-color: white;
+    margin: 100px auto 0;
+    width: 500px;
+    height: 400px;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+button {
+    font-size: 30px;
+    background: #d3ad7f;
+}
+button:hover{
+    transform: scale(1.1);
+}

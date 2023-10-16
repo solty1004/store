@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* login_area 영역 시작 */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=IBM+Plex+Sans+Thai+Looped:wght@400;700&display=swap');
+
+
+/*rocal style*/
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255, .3)
+
+}
+
+
+*{
+    font-family: 'Anton', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top:9em;
+    scroll-behavior:smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8em;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius:5em;
+}
+
+body{
+    background: var(--bg);
+}
+
+.contents {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+    display: block; /* Ensure the element is displayed */
+    opacity: 1; /* Ensure the element is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+    visibility: visible; /* Ensure element is visible */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Allow the element to expand vertically */
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 100px;
+    width: 700px;
+    height: 800px;
+    padding-top: 30px;
+}
+
+
+.login_area {
+    width: 100%;
+    padding-bottom: 100px;
+    display: flex;
+}
+
+.login_area_inner {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.login_area_inner h2 {
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    font-weight: normal;
+    text-align: center;
+    padding: 90px 0 60px 0;
+}
+
+.login_area_inner form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+.login_input_id,
+.login_input_pwd {
+    width: 378px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.login_input_id {
+    margin-bottom: 10px;
+}
+
+.login_input_id:focus,
+.login_input_pwd:focus {
+    outline: none;
+}
+
+.find_area {
+    width: 100%;
+    text-align: right;
+    color: #999;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+.find_area a {
+    color: #999;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.find_area a:hover {
+    color: #222;
+}
+
+.btn_login {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 0;
+    background-color: #222;
+    border: 1px solid #222;
+    width: 100%;
+    text-align: center;
+}
+
+.btn_login1 {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 0;
+    margin-top: 10px;
+    background-color: #222;
+    border: 1px solid #222;
+    width: 368px;
+    text-align: center;
+}
+
+.btn_login:hover{
+    cursor: pointer;
+}
+
+.register_area {
+    width: 400px;
+    margin: 30px auto 0 auto;
+    padding: 30px 0;
+    border: 1px solid #e1e1e1;
+    font-size: 15px;
+    letter-spacing: 0;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    color: #777;
+}
+
+.btn_login1:hover{
+    cursor: pointer;
+}
+
+.btn_register_area {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn_register {
+    display: inline-block;
+    color: #222;
+    font-weight: bold;
+    padding: 15px 0;
+    background-color: #fff;
+    border: 2px solid #222;
+    margin-top: 30px;
+    width: 150px;
+}
+/* login_area 영역 종료 */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상점</title>
+    <link rel="stylesheet" href="/css/main.css" >
+
+    <!-- font cdn link -->
+<!--    <link rel="stylesheet" href="http:///cdnjs.cloudflare.com/ajax/libs/font-awsome/5.15.4/css/all.min.css">-->
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icon cdn-->
+</head>
+
+<body>
+    <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+    <!-- header section ends -->
+
+    <!-- menu section starts -->
+    <div id="main">
+        <div id="content">
+            <div class="products" th:if="${!itemAllList.isEmpty()}">
+                <ul>
+                    <li th:each="item : ${itemAllList}">
+                        <form method="post" action="/basket">
+                            <input type="hidden" name="itemID" th:value="${item.getItemID()}">
+                            <a href="#"><img th:src="@{/css/images/gagu/} + ${item.getItemImg()}" alt="" /></a>
+                            <div class="product-info">
+                                <h3 th:text="${item.getItemName()}"></h3>
+                                <div class="product-desc">
+                                    <h4 th:text="${item.getItemType()}"></h4>
+                                    <p th:text="${item.getItemInfoDetail()}"><br>
+                                    </p>
+                                    <p class="price" th:text="'가격: ' + ${item.getItemAmount()}"></p> </div>
+                                <input type="submit" value="장바구니 담기">
+                            </div>
+                        </form>
+                    </li>
+
+
+                </ul>
+                <div class="more-bar"></div>
+            </div>
+            <div th:unless="${!itemAllList.isEmpty()}">준비된 상품이 없습니다</div>
+        </div>
+        </form>
+    </div><!--메인-->
+
+<script src="/js/main.js"></script>
+</body>
+
+</html>

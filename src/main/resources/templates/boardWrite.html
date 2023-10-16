@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>글작성</title>
+    <link rel="stylesheet" href="/css/boardWrite.css" />
+    <link media="all" rel="stylesheet" th:href="@{/css/main.css}" type="text/css" />
+    <!-- font cdn link -->
+    <!--    <link rel="stylesheet" href="http:///cdnjs.cloudflare.com/ajax/libs/font-awsome/5.15.4/css/all.min.css">-->
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icon cdn-->
+</head>
+
+<body>
+    <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+    <!-- header section ends -->
+
+<div class="all">
+    <form method="post" action="boardInsert">
+        <input type="text" name="boardName" class="boardName" placeholder="제목">
+        <input type="hidden" name="boardTime" class="boardTime"><!-- 시간 함수 활용 필요-->
+        <input type="text" name="boardDivide" class="boardDivide" placeholder="구분">
+
+        <textarea rows="30" cols="40" name="boardContents" class="boardUpdate" placeholder="내용을 입력하세요."></textarea>
+
+
+        <div class="btn_box">
+            <input type="submit" value="등록" class="btn">
+        </div>
+        </form>
+</div>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

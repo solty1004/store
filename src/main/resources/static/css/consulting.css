@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=IBM+Plex+Sans+Thai+Looped:wght@400;700&display=swap');
+
+main {
+    width: 100%;
+    height: 1900px;
+    color:#fff;
+}
+
+.contents {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+    display: block; /* Ensure the element is displayed */
+    opacity: 1; /* Ensure the element is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+    visibility: visible; /* Ensure element is visible */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Allow the element to expand vertically */
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 100px;
+    width: 700px;
+    height: 800px;
+    padding-top: 30px;
+}
+
+#lb {
+    width: 90%;
+    height: 20px;
+    appearance: none;
+    display: block; /* Display를 block으로 설정합니다. */
+    margin: 0 auto; /* 상단/하단 여백은 10px, 수평 가운데 정렬은 auto로 설정합니다. */
+}
+
+#lb::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+}
+#lb::-webkit-progress-value {
+    border-radius:10px;
+    background: skyblue;
+
+}
+.mainform {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.first-goal, .second-goal, .third-goal{
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: none rgb(255, 255, 255);
+    padding: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 0px 12px;
+    box-shadow: rgba(63, 71, 77, 0.05) 0px 2px 6px;
+    border: 1px solid rgb(234, 237, 239);
+    border-radius: 8px;
+    width: 80%;
+    font-size: 20px;
+}
+
+.nextBtn {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px; /* 원하는 아래쪽 여백 조절 */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+#actionBtn {
+    display: block;
+    margin: 20px auto; /* 수직 중앙 정렬 및 좌우 중앙 정렬 */
+    padding: 10px 20px;
+    font-size: 4rem;
+    font-weight: bold;
+    background: var(--bg);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* 상단 여백 추가 */
+    margin-bottom: 0; /* 하단 여백 제거 */
+
+}
+
+#actionBtn:hover {
+    background-color: #c1864a;
+}
+

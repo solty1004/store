@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨설팅</title>
+    <link rel="stylesheet" href="/css/main.css" >
+    <link rel="stylesheet" href="/css/consulting.css" >
+    <!-- font cdn link -->
+    <!--    <link rel="stylesheet" href="http:///cdnjs.cloudflare.com/ajax/libs/font-awsome/5.15.4/css/all.min.css">-->
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icon cdn-->
+</head>
+<body>
+    <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+
+<!-- header section ends -->
+
+    <section class="contents">
+
+        <div class="forms">
+            <div class="gaugebar">
+                <progress value="0" max="100" id="lb"></progress>
+            </div>
+            <div class="mainform">
+                당신이 원하는 모든 모델링
+                <br> 함께 만들어가요
+            </div>
+            <div class="first-goal">
+                우리는 만들어가는 사이트입니다.
+            </div>
+            <div class="second-goal">
+                잘 부탁드립니다.
+            </div>
+            <div class="third-goal">
+                이상입니다.
+            </div>
+        </div>
+        <div class="nextBtn">
+            <button type="submit" id="actionBtn">다음</button>
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/consulting.js"></script>
+    <script>
+        var message = "[[${message}]]";
+        if (message && message.trim() !== "") {
+            alert(message);
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>

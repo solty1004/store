@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewprot" content="width=device-width, initial scale=1.0">
+
+    <!-- font cdn link -->
+    <link rel="stylesheet" href="http:///cdnjs.cloudflare.com/ajax/libs/font-awsome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href ="/css/home.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="shopping.html" data-text="Shopping">Shopping</a>
+    <a href="#" data-text="Brand">Brand</a>
+    <a href="#" data-text="Magazin">Magazin</a>
+    <a href="#" data-text="Community">Community</a>
+    <a href="consulting.html" data-text="Consulting">Consulting</a>
+    <div class="background-image"></div>
+</nav>
+
+<script>
+    var message = "[[${message}]]";
+    if (message && message.trim() !== "") {
+        alert(message);
+    }
+</script>
+</body>
+</html>

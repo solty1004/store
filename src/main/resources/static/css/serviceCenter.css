@@ -1,0 +1,55 @@
+/* 공통 스타일 */
+#content {
+    background-color: #F4F4F4;
+    padding: 20px;
+    width: 1400px;
+    height: 110%;
+}
+
+.all {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tr {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.all a {
+    float: right;
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.all a:hover {
+    background-color: #0056b3;
+}
+
+/* 등록된 게시글이 없을 때의 스타일 */
+.text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.boardID{
+    text-align: right;
+}

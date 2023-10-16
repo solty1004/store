@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css" >
+    <link rel="stylesheet" href="/css/boardDelete.css" />
+
+    <!-- icon cdn-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- icon cdn-->
+</head>
+
+<body>
+<div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+<!-- header section ends -->
+<div id="content">
+<div class="all">
+
+    <form method="post" action="boardDeleteCheck">
+        <input type="text" name="boardID" class="boardID" th:value="${boardID}" readonly>
+        <input type="text" name="boardName" class="boardName" th:value="${boardName}" readonly>
+        <input type="text" name="userPassword" class="userPassword" placeholder="비밀번호 입력">
+
+    <div class="btn_box">
+        <input type="submit" value="삭제" class="delete"><input type="button" value="취소" onclick="window.history.back()" class="reset">
+    </div>
+    </form>
+</div>
+    </div>
+<script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* login_area 영역 시작 */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=IBM+Plex+Sans+Thai+Looped:wght@400;700&display=swap');
+
+
+/*rocal style*/
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255, .3)
+
+}
+
+
+*{
+    font-family: 'Anton', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top:9em;
+    scroll-behavior:smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8em;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius:5em;
+}
+
+body{
+    background: var(--bg);
+}
+
+.contents {
+    background:#f0f0f0;
+    border-radius:10px;
+    box-shadow: inset 3px 3px 10px #ccc;
+    display: block; /* Ensure the element is displayed */
+    opacity: 1; /* Ensure the element is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+    visibility: visible; /* Ensure element is visible */
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Allow the element to expand vertically */
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 100px;
+    width: 700px;
+    height: 800px;
+    padding-top: 30px;
+}
+
+
+.user_area {
+    width: 100%;
+    padding-bottom: 100px;
+    display: flex;
+}
+
+.user_area_inner {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: -90px;
+}
+
+.user_area_inner h2 {
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    font-weight: normal;
+    text-align: center;
+    padding: 90px 0 60px 0;
+}
+
+.user_area_inner form {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.user_input_name,
+.user_input_id,
+.user_input_pwd{
+    width: 338px;
+    display: block;
+    padding: 15px;
+    border: 1px solid #222;
+    margin: 3px;
+}
+
+.user_input_email{
+    width: 338px;
+    padding: 15px;
+    border: 1px solid #222;
+    margin: 10px 0 20px 3px;
+}
+
+.user_input_pwd,
+.user_input_num,
+.user_input_add,
+.user_input_addDetail,
+.user_input_post {
+    width: 338px;
+    display: block;
+    padding: 15px;
+    border: 1px solid #222;
+    margin: 3px;
+}
+
+.btn_submit{
+    background-color: #222;
+    width: 184px;
+    height: 48px;
+    color: white;
+}
+
+.btn_reset{
+    background-color: #222;
+    width: 184px;
+    height: 48px;
+    color: white;
+}
+
+.btn_reset:hover{
+    cursor: pointer;
+}
+
+.btn_submit:hover{
+    cursor: pointer;
+}

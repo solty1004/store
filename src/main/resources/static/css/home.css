@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Pacifico&display=swap');
+
+*{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Pacifico', cursive;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration:none;
+    text-transform:uppercase;
+    transition: all .2s linear;
+}
+
+body,
+html{
+    overflow-x:hidden;
+}
+
+#id{
+    float:left;
+
+
+}
+
+.navbar{
+    position:fixed;
+    top:0; left:0;
+    height:100%;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow:column;
+    padding:0 10%;
+}
+
+.navbar a{
+    font-size:4em;
+    color:ransparent;
+    -webkit-text-stroke:.5px #484848;
+    color:#000;
+    font-weight:bolder;
+    position:relative;
+    letter-spacing: 3px;
+}
+
+.navbar a::before{
+    content:attr(data-text);
+    position: absolute;
+    top:0; left:0;
+    color:#D5D5D5;
+    transition: .9s linear;
+    clip-path:polygon(0 0, 0 0,0 100%,0 100%);
+}
+.navbar a:hover::before{
+    clip-path:polygon(0 0,100% 0,99% 100%,0 100%);
+
+}
+
+.background-image{
+    position:absolute;
+    top:0; left:0;
+    height:100%;
+    width:100%;
+    background:url(images/home/index_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+    z-index: -1;
+}
+
+.navbar a:hover:nth-child(1) ~ .background-image{
+    background:url(images/home/menu1_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+
+.navbar a:hover:nth-child(2) ~ .background-image{
+    background:url(images/home/menu2_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+
+.navbar a:hover:nth-child(3) ~ .background-image{
+    background:url(images/home/menu3_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+
+.navbar a:hover:nth-child(4) ~ .background-image{
+    background:url(images/home/menu4_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}
+
+.navbar a:hover:nth-child(5) ~ .background-image{
+    background:url(images/home/menu5_bg.jpg) no-repeat;
+    background-size:cover;
+    background-position:center;
+
+}

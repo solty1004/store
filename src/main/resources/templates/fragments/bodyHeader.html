@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div class="header" th:fragment="bodyHeader">
+    <header class="header">
+        <a href="#" class="logo">
+            <!-- logo img src-->
+        </a>
+
+        <nav class="navbar">
+            <a href="shopping.html" data-text="Shopping">Shopping</a>
+            <a href="#" data-text="Brand">Brand</a>
+            <a href="#" data-text="Magazin">Magazin</a>
+            <a href="#" data-text="Community">Community</a>
+            <a href="consulting.html" data-text="Consulting">Consulting</a>
+        </nav>
+
+        <div class="icons">
+            <div id="userJoin">
+                <div th:if="${session.userID == null}">
+                    <a href="login.html">로그인</a> <a href="register.html">회원가입</a>
+                </div>
+                <div th:unless="${session.userID == null}">
+                    <a href="mypage.html" id="userName" th:text="'사용자 ' + ${session.userName} +'님'"></a> <a href="userLogout.html">로그아웃</a>
+                </div>
+                <div th:if="${session.userID == 'admin'}">
+                    <a href="itemUp.jsp">상품관리</a>
+                </div>
+                <div>
+                    <a href="service_center">고객센터</a>
+                </div>
+            </div>
+
+            <div class="fas fa-search" id="search-btn">
+                <form action="/itemNameSearch" method="post">
+                </form>
+            </div>
+        </div>
+
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+
+    </header>
+    <script>
+        // label 요소를 클릭하면 form을 submit
+        document.querySelector('label[for="search-box"]').addEventListener("click", function() {
+            document.querySelector('form[action="/itemNameSearch"]').submit();
+        });
+    </script>
+</div>

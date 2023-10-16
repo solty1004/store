@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.all {
+    width: 600px;
+    background: #D5D5D5;
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], textarea {
+    font-family: 'NanumSquareNeo-Variable';
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.boardTime {
+    display: none; /* 시간 입력 필드 숨김 */
+}
+
+.btn_box {
+    text-align: center;
+}
+
+.btn {
+    font-family: 'NanumSquareNeo-Variable';
+    color: #333;
+    padding: 15px 0;
+    background-color: #0056b3;
+    border: 1px solid #ebddcc;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #d3ad7f;
+    color: #fff;
+}

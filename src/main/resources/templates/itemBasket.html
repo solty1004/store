@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>장바구니</title>
+	<link rel="stylesheet" href="/css/main.css" >
+	<link rel="stylesheet" href="/css/itemBasket.css" >
+	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- icon cdn-->
+</head>
+
+<body>
+<div th:replace="fragments/bodyHeader :: bodyHeader"></div>
+
+<div id="container">
+	<section class="contents">
+		<main>
+				
+
+			<div th:each="basItem : ${basitemList}">
+			<form method="post" action="/PayCheck">
+			<input type="hidden" name="itemID" th:value="${basItem.getItemID()}">
+			<table border="1px">
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="itemName" th:value="${basItem.getItemName()}" readonly></td>
+				</tr>
+				<tr>
+					<td>가격</td>
+					<td><input type="text" name="itemAmount" th:value="${basItem.getItemAmount()}" readonly></td>
+				</tr>
+				<tr>
+					<td>종류</td>
+					<td><input type="text" name="itemType" th:value="${basItem.getItemType()}" readonly></td>
+				</tr>
+<!-- 카운트 변경--><tr>
+					<td>구매개수</td>
+					<td><input type="text" name="buyCount" value="1" readonly></td>
+				</tr>
+				<tr>
+					<td>최종가격</td>
+
+					<td><input type="text" name="totalAmount" th:value="${basItem.getItemAmount() * basItem.getItemCount()}" readonly></td>
+					
+				</tr>
+			</table>
+			<button type="submit">구매하기</button>
+			</form>
+			</div>
+			<div th:if="${basketList.isEmpty()}">
+			<p>장바구니가 비어있습니다
+				추후 이동 기능 추가 필요
+			</p>
+			</div>
+		</main>
+	</section>
+	</div>
+	<script>
+    </script>
+	<script src="js/action.js"></script>
+<script src="/js/main.js"></script>
+	
+</body>
+
+</html>
